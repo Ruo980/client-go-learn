@@ -33,11 +33,11 @@ func getPodsTest(clientset *kubernetes.Clientset) *v1.PodList {
 //
 //	@Description: 主函数：执行 ClientSet 操作的入口
 func ClientSetLearn() {
-	// TODO 利用 k8sConfig 获取 ClientSet对象
+	// 利用 k8sConfig 获取 ClientSet对象
 	k8sConfig := config.NewK8sConfig()
 	client := k8sConfig.InitClient()
 
-	// TODO 得到 test 空间全部 pod 信息
+	// 得到 test 空间全部 pod 信息
 	podList := getPodsTest(client)
 	fmt.Println(podList)
 	for _, item := range podList.Items {
