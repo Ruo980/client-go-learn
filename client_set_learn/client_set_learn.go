@@ -39,7 +39,6 @@ func ClientSetLearn() {
 
 	// 得到 test 空间全部 pod 信息
 	podList := getPodsTest(client)
-	fmt.Println(podList)
 	for _, item := range podList.Items {
 		fmt.Printf("namespace:%v,name:%v\n", item.Namespace, item.Name)
 	}
